@@ -4,10 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import java.io.*;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Scanner;
 
 public class Task2Main {
@@ -37,7 +34,6 @@ public class Task2Main {
 
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         String s = gson.toJson(list);
-
         OutputStream fos = new FileOutputStream("user.json");
         fos.write(s.getBytes());
         Writer fw = new FileWriter("user.json");
